@@ -5,6 +5,29 @@
     <RootNamespace>Color_Palette</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <PackageId>wpf.colorpalette</PackageId>
+    <Authors>ookii-tsuki</Authors>
+    <Company>ookii-tsuki</Company>
+    <Description>A WPF library for generating a color palette from an image inspired by Android's Palette API</Description>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>android, color, library, wpf, color-scheme, color-palette, android-library, port, wpf-ui, wpf-application, color-palette-generator, wpf-library</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/ookii-tsuki/wpf-color-palette</RepositoryUrl>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageReleaseNotes>First version of the library</PackageReleaseNotes>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

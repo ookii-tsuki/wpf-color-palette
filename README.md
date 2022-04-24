@@ -2,16 +2,16 @@
  This is a WPF library for generating a color palette from an image ported from [Android's Palette API](https://developer.android.com/training/material/palette-colors)
  | Package |                    NuGet ID                     |                         NuGet Status                         |
 | :-----: | :---------------------------------------------: | :----------------------------------------------------------: |
-| WPF Color Picker  | [Color Picker](https://www.nuget.org/packages/Doushi/1.0.0) | [![Stat](https://img.shields.io/nuget/v/Doushi.svg)](https://www.nuget.org/packages/Doushi/1.0.0) |
+| WPF Color Picker  | [wpf.colorpalette](https://www.nuget.org/packages/wpf.colorpalette/1.0.0) | [![Stat](https://img.shields.io/nuget/v/wpf.colorpalette.svg)](https://www.nuget.org/packages/wpf.colorpalette/1.0.0) |
  
 ## Installation
  The package can be installed by NuGet:
  ```powershell
- Install-Package Doushi -Version 1.0.0
+ Install-Package Install-Package wpf.colorpalette -Version 1.0.0
  ```
  Or reference it in your project:
  ```xml
- <PackageReference Include="Doushi" Version="1.0.0" />
+ <PackageReference Include="wpf.colorpalette" Version="1.0.0" />
  ```
 
 ## Create a palette
@@ -62,8 +62,8 @@ An example image with its vibrant-colored toolbar and corresponding title text c
 ## Preview
  These are some preview images from the example project
  <p align="center">
-<img src="Preview/Screenshot 2021-12-19 161054.png" width="600" title="Preview 1">
+<img src="preview-1.png" width="600" title="Preview 1">
 </p>
 <p align="center">
-<img src="Preview/Screenshot 2021-12-19 160946.png" width="600" title="Preview 2">
+<img src="preview-2.png" width="600" title="Preview 2">
 </p>
