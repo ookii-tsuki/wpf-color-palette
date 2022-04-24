@@ -1,0 +1,47 @@
+﻿<Window x:Class="Color_Palette_Cli.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Color_Palette_Cli"
+        mc:Ignorable="d"
+        Title="Color Palette" Height="350" Width="722">
+    <Window.Resources>
+        <Style x:Key="ColorButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Margin" Value="10,10" />
+            <Setter Property="Padding" Value="10,10" />
+            <Setter Property="Width" Value="100" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5" />
+                </Style>
+            </Style.Resources>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <GroupBox x:Name="colorPaletteBox" Header="Color Palette" Margin="298,10,10,10">
+            <WrapPanel ScrollViewer.VerticalScrollBarVisibility="Disabled" HorizontalAlignment="Center" VerticalAlignment="Center" Height="119" Width="372" Orientation="Horizontal">
+                <Button x:Name="mutedBtn" Content="Muted" Style="{StaticResource ColorButtonStyle}" Click="ColorBtn_Click"/>
+                <Button x:Name="darkMutedBtn" Content="Dark Muted" Style="{StaticResource ColorButtonStyle}" Click="ColorBtn_Click"/>
+                <Button x:Name="lightMutedBtn" Content="Light Muted" Style="{StaticResource ColorButtonStyle}" Click="ColorBtn_Click"/>
+                <Button x:Name="vibrantBtn" Content="Vibrant" Style="{StaticResource ColorButtonStyle}" Click="ColorBtn_Click"/>
+                <Button x:Name="darkVibrantBtn" Content="Dark Vibrant" Style="{StaticResource ColorButtonStyle}" Click="ColorBtn_Click"/>
+                <Button x:Name="lightVibrantBtn" Content="Light Vibrant" Style="{StaticResource ColorButtonStyle}" Click="ColorBtn_Click"/>
+            </WrapPanel>
+        </GroupBox>
+        <GroupBox x:Name="imageBox" Header="Image" Margin="10,10,0,10" HorizontalAlignment="Left" Width="283">
+            <StackPanel>
+                <Button x:Name="import" Content="Import" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="24" Width="78" Click="ImportImage">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Image x:Name="image" HorizontalAlignment="Stretch" Margin="10,10,0,12" Width="251" Height="236"/>
+            </StackPanel>
+        </GroupBox>
+
+    </Grid>
+</Window>
