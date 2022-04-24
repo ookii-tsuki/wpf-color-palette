@@ -21,13 +21,14 @@
     </Window.Resources>
     <Grid>
         <GroupBox x:Name="colorPaletteBox" Header="Color Palette" Margin="298,10,10,10">
-            <WrapPanel ScrollViewer.VerticalScrollBarVisibility="Disabled" HorizontalAlignment="Center" VerticalAlignment="Center" Height="119" Width="372" Orientation="Horizontal">
+            <WrapPanel ScrollViewer.VerticalScrollBarVisibility="Disabled" HorizontalAlignment="Center" VerticalAlignment="Center" Height="152" Width="372" Orientation="Horizontal">
                 <Button x:Name="mutedBtn" Content="Muted" Style="{StaticResource ColorButtonStyle}" Click="ColorBtn_Click"/>
                 <Button x:Name="darkMutedBtn" Content="Dark Muted" Style="{StaticResource ColorButtonStyle}" Click="ColorBtn_Click"/>
                 <Button x:Name="lightMutedBtn" Content="Light Muted" Style="{StaticResource ColorButtonStyle}" Click="ColorBtn_Click"/>
                 <Button x:Name="vibrantBtn" Content="Vibrant" Style="{StaticResource ColorButtonStyle}" Click="ColorBtn_Click"/>
                 <Button x:Name="darkVibrantBtn" Content="Dark Vibrant" Style="{StaticResource ColorButtonStyle}" Click="ColorBtn_Click"/>
                 <Button x:Name="lightVibrantBtn" Content="Light Vibrant" Style="{StaticResource ColorButtonStyle}" Click="ColorBtn_Click"/>
+                <Label Content="  Click on colors to copy code to clipboard" Width="364"/>
             </WrapPanel>
         </GroupBox>
         <GroupBox x:Name="imageBox" Header="Image" Margin="10,10,0,10" HorizontalAlignment="Left" Width="283">
