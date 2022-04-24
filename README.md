@@ -18,9 +18,10 @@
  A `Palette` object gives you access to the primary colors in an image, as well as the corresponding colors for overlaid text. Use palettes to design your games's style and to dynamically change your games's color scheme based on a given source image.
  
  ### Generate a Palette instance
- Generate a `Palette` instance using `Palette`'s `Generate(Texture2D texture)` function
+ Generate a `Palette` instance using `Palette`'s `Generate(BitmapSource image)` function
  ```csharp
- Palette palette = Palette.Generate(image.sprite.texture);
+ var bm = new BitmapImage(new Uri(@"C:/../...png"));
+ Palette palette = Palette.Generate(bm);
  ```
  Based on the standards of material design, the palette library extracts commonly used color profiles from an image. Each profile is defined by a Target, and colors extracted from the texture image are scored against each profile based on saturation, luminance, and population (number of pixels in the texture represented by the color). For each profile, the color with the best score defines that color profile for the given image.
  
@@ -40,18 +41,18 @@ This figure displays a photo and its corresponding color profiles from the `Get<
 </p>
 
 ```csharp
-MutedColor.color = palette.GetMutedColor();
-VibrantColor.color = palette.GetVibrantColor();
-LightMutedColor.color = palette.GetLightMutedColor();
-LightVibrantColor.color = palette.GetLightVibrantColor();
-DarkMutedColor.color = palette.GetDarkMutedColor();
-DarkVibrantColor.color = palette.GetDarkVibrantColor();
+Color MutedColor = palette.GetMutedColor();
+Color VibrantColor = palette.GetVibrantColor();
+Color LightMutedColor = palette.GetLightMutedColor();
+Color LightVibrantColor = palette.GetLightVibrantColor();
+Color DarkMutedColor = palette.GetDarkMutedColor();
+Color DarkVibrantColor = palette.GetDarkVibrantColor();
 ```
 You can aso create more comprehensive color schemes using the `GetBodyTextColor()` and `GetTitleTextColor()` extension methods the `Color` struct. These methods return colors appropriate for use over the swatch’s color.
 ```csharp
-Color vibrantColor = palette.GetVibrantColor();
-backgroud.color = vibrantColor;
-text.color = vibrantColor.GetTitleTextColor();
+var muted = palette.GetMutedColor(Colors.White);
+mutedBtn.Background = new SolidColorBrush(muted);
+mutedBtn.Foreground = new SolidColorBrush(muted.GetTitleTextColor());
 ```
 An example image with its vibrant-colored toolbar and corresponding title text color.
 <p align="center">
