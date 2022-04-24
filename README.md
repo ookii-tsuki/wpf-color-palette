@@ -7,7 +7,7 @@
 ## Installation
  The package can be installed by NuGet:
  ```powershell
- Install-Package Install-Package wpf.colorpalette -Version 1.0.0
+ Install-Package wpf.colorpalette -Version 1.0.0
  ```
  Or reference it in your project:
  ```xml
@@ -62,8 +62,8 @@ An example image with its vibrant-colored toolbar and corresponding title text c
 ## Preview
  These are some preview images from the example project
  <p align="center">
-<img src="preview-1.png" width="600" title="Preview 1">
+<img src="preview-1.jpg" width="600" title="Preview 1">
 </p>
 <p align="center">
-<img src="preview-2.png" width="600" title="Preview 2">
+<img src="preview-2.jpg" width="600" title="Preview 2">
 </p>
