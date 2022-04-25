@@ -23,7 +23,7 @@
  var bm = new BitmapImage(new Uri(@"C:/../...png"));
  Palette palette = Palette.Generate(bm);
  ```
- Based on the standards of material design, the palette library extracts commonly used color profiles from an image. Each profile is defined by a Target, and colors extracted from the texture image are scored against each profile based on saturation, luminance, and population (number of pixels in the texture represented by the color). For each profile, the color with the best score defines that color profile for the given image.
+ Based on the standards of material design, the palette library extracts commonly used color profiles from an image. Each profile is defined by a Target, and colors extracted from the bitmap image are scored against each profile based on saturation, luminance, and population (number of pixels in the bitmap represented by the color). For each profile, the color with the best score defines that color profile for the given image.
  
 The palette library attempts to extract the following six color profiles:
 * Light Vibrant
